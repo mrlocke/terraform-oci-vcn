@@ -31,6 +31,7 @@ module "subnet" {
   nat_route_id   = var.create_nat_gateway ? oci_core_route_table.nat[0].id : null
 
   freeform_tags = var.freeform_tags
+  defined_tags  = var.defined_tags
 
   count = length(var.subnets) > 0 ? 1 : 0
 
